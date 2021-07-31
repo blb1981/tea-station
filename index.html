@@ -12,6 +12,23 @@
 	</head>
 	<body>
 		<!------- Nav ------->
+		<!-- Nav button -->
+		<span class="nav-button" id="nav-btn">
+			<i class="fas fa-bars"></i>
+		</span>
+
+		<!-- Nav menu -->
+		<nav class="navbar" id="navbar">
+			<div class="navbar-header">
+				<span class="nav-close" id="nav-close"><i class="fas fa-times"></i></span>
+			</div>
+			<ul class="nav-items">
+				<li><a href="index.html" class="nav-link">Home</a></li>
+				<li><a href="skills.html" class="nav-link">Skills</a></li>
+				<li><a href="about.html" class="nav-link">About</a></li>
+				<li><a href="products.html" class="nav-link">Products</a></li>
+			</ul>
+		</nav>
 		<!------- End nav ------->
 
 		<!------- Header ------->
@@ -283,6 +300,22 @@
 		</section>
 		<!-- End contact section -->
 
-		<script src="app.js"></script>
+		<!-- Footer section -->
+		<footer class="footer">
+			<div class="section-center">
+				<div class="social-icons">
+					<a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+					<a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+					<a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+				</div>
+				<h4 class="footer-text">
+					&copy; <span id="date"></span>
+					<span class="company">Tea Station</span>
+					All Rights Reserved
+				</h4>
+			</div>
+		</footer>
+
+		<script src="./app.js"></script>
 	</body>
 </html>

@@ -11,7 +11,10 @@
   --clr-grey-5: #617d98;
   --clr-grey-10: #f1f5f8;
   --clr-white: #fff;
+  --clr-black: #222;
   --clr-yellow: #e9b949;
+  --clr-red: #f29c9c;
+  --clr-red-dark: #bb2525;
   --ff-primary: "Catamaran", sans-serif;
   --ff-secondary: "Grand Hotel", cursive;
   --transition: all 0.3s linear;
@@ -136,6 +139,70 @@ p {
   .section-center {
     width: 95vw;
     padding: 4rem 1rem;
+  }
+}
+
+/*------- Nav button -------*/
+.nav-button {
+  position: fixed;
+  color: var(--clr-primary);
+  top: 5%;
+  left: 5%;
+  font-size: 2.5rem;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* Nav menu */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: var(--clr-grey-10);
+  box-shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
+  /* hide navbar */
+}
+.showNav {
+  /* show navbar */
+}
+.navbar-header {
+  text-align: right;
+  padding-right: 1rem;
+}
+.nav-close {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--clr-red);
+  transition: var(--transition);
+}
+.nav-close:hover {
+  color: var(--clr-red-dark);
+}
+.nav-items {
+  list-style-type: none;
+}
+.nav-link {
+  display: block;
+  font-size: 1.5rem;
+  padding: 0.25rem 1rem;
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+  color: var(--clr-grey-5);
+  transition: var(--transition);
+}
+.nav-link:hover {
+  background: var(--clr-primary-light);
+  padding-left: 1.5rem;
+  color: var(--clr-primary);
+  border-left: 0.25rem solid var(--clr-primary);
+}
+@media screen and (min-width: 768px) {
+  .navbar {
+    width: 30vw;
+    max-width: 20rem;
   }
 }
 
@@ -452,6 +519,7 @@ and change widths at various breakpoints.
   border-radius: var(--radius);
   text-transform: uppercase;
   letter-spacing: var(--spacing);
+  /* box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1); */
 }
 /* 
 	Placeholder is done this way 
@@ -463,17 +531,38 @@ and change widths at various breakpoints.
   letter-spacing: var(--spacing);
 }
 .submit-btn {
-	display: block;
-	width: 100%;
-	border-bottom-left-radius: var(--radius);
-	border-bottom-right-radius: var(--radius);
-	padding: 1rem;
+  display: block;
+  width: 100%;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  padding: 1rem;
 }
 @media screen and (min-width: 992px) {
-	.contact-form,
-	.contact-info {
-		float: left;
-		width: 50%;
-
-	}
+  .contact-form,
+  .contact-info {
+    float: left;
+    width: 50%;
+  }
+}
+.footer {
+  background-color: var(--clr-black);
+  text-align: center;
+}
+.social-icon {
+  color: var(--clr-white);
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  transition: var(--transition);
+}
+.social-icon:hover {
+  color: var(--clr-primary);
+}
+.footer-text {
+  margin-top: 1.25rem;
+  text-transform: uppercase;
+  color: var(--clr-white);
+  font-weight: 400;
+}
+.footer .company {
+  color: var(--clr-primary);
 }
