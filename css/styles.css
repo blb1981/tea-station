@@ -151,6 +151,23 @@ p {
   font-size: 2.5rem;
   z-index: 1;
   cursor: pointer;
+  animation-name: navButton;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+/* Animation for nav button */
+@keyframes navButton {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* Nav menu */
@@ -163,10 +180,13 @@ p {
   z-index: 1;
   background: var(--clr-grey-10);
   box-shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
-  /* hide navbar */
+  /* Hide navigation */
+  transform: translateX(-100%);
+  transition: var(--transition);
 }
 .showNav {
-  /* show navbar */
+  transform: translateX(0%);
+  transition: var(--transition);
 }
 .navbar-header {
   text-align: right;
@@ -223,20 +243,51 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  /* overflow; */
 }
 
 .banner h2 {
   font-family: var(--ff-secondary);
   color: var(--clr-primary);
-  /* animation here */
+  animation: slideFromLeft 4s ease 1;
 }
-
+/* h2 animation */
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(50%);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(-10%);
+    opacity: 0.75;
+  }
+}
 .banner h1 {
   text-transform: uppercase;
   color: var(--clr-white);
   margin-top: 1.25rem;
   margin-bottom: 2rem;
-  /* animation here */
+  animation: slideFromRight 4s ease 1;
+}
+
+/* h1 animation */
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-50%);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(10%);
+    opacity: 0.75;
+  }
 }
 
 .banner-btn {
@@ -244,6 +295,21 @@ p {
   outline-offset: 0.25rem;
   font-size: 1.25rem;
   padding: 1rem 1.75rem;
+  animation: button 4s ease 1;
+}
+/* banner-btn animation */
+@keyframes button {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /*------- Content divider -------*/
