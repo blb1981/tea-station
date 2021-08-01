@@ -14,3 +14,15 @@ navClose.addEventListener("click", () => {
 const date = (document.getElementById(
   "date"
 ).innerHTML = new Date().getFullYear());
+//handle form submission
+const contactForm = document.getElementById('contactForm')
+let contactName = document.getElementById('contactName')
+let contactEmail = document.getElementById('contactEmail')
+let contactMessage = document.getElementById('contactMessage')
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault()
+  contactName.value = ''
+  contactEmail.value = ''
+  contactMessage.value = ''
+  alert('Thanks for your submission!')
+})
